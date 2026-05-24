@@ -113,7 +113,7 @@ export default function App() {
 
             <div className="contact-list">
               <div><Phone size={16} color="#1d3557" /> (267) 709-2590</div>
-              <div><Mail size={16} color="#1d3557" /> <a href="mailto:fulcrumglass@gmail.com">fulcrumglass@gmail.com</a></div>
+              <div><Mail size={16} color="#1d3557" /> <a href="mailto:info@fulcrumglass.com">info@fulcrumglass.com</a></div>
               <div><MapPin size={16} color="#1d3557" /> Philadelphia area and surrounding service areas</div>
             </div>
           </div>
