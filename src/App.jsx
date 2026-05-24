@@ -113,23 +113,23 @@ export default function App() {
 
             <div className="contact-list">
               <div><Phone size={16} color="#1d3557" /> (267) 709-2590</div>
-              <div><Mail size={16} color="#1d3557" /> info@fulcrumglass.com</div>
+              <div><Mail size={16} color="#1d3557" /> <a href="mailto:fulcrumglass@gmail.com">fulcrumglass@gmail.com</a></div>
               <div><MapPin size={16} color="#1d3557" /> Philadelphia area and surrounding service areas</div>
             </div>
           </div>
 
-          <form className="contact-form">
-            <input placeholder="Name" />
-            <input placeholder="Phone / Email" />
-            <select defaultValue="">
+          <form className="contact-form" action="https://formspree.io/f/xykvpozp" method="POST">
+            <input name="name" placeholder="Name" required />
+            <input name="contact" placeholder="Phone / Email" required />
+            <select name="project_type" defaultValue="" required>
               <option value="" disabled>Project Type</option>
               <option>Frameless Shower Door</option>
               <option>Custom Mirror</option>
               <option>Window Replacement</option>
               <option>Tabletop / Custom Glass</option>
             </select>
-            <textarea placeholder="Project details" />
-            <button className="btn" type="button">Submit Request</button>
+            <textarea name="message" placeholder="Project details" required />
+            <button className="btn" type="submit">Submit Request</button>
           </form>
         </div>
       </section>
