@@ -153,9 +153,18 @@ background-image:
 }
 
 .lux-proof-icon {
-  font-size: 34px;
-  line-height: 1;
-  color: rgba(255, 255, 255, 0.78);
+  width: 46px;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.lux-proof-icon svg {
+  width: 46px;
+  height: 46px;
+  display: block;
 }
 
 @media (max-width: 960px) {
