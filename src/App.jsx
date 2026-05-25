@@ -1,142 +1,61 @@
 import React from "react";
-import { ArrowRight, CheckCircle2, Phone, Mail, MapPin } from "lucide-react";
-import heroImage from "./assets/hero-bathroom.png";
-import FulcrumHeader from "./FulcrumHeader";
+import { ArrowRight } from "lucide-react";
 import "./App.css";
+import FulcrumHeader from "./FulcrumHeader";
 
 export default function App() {
   return (
-    <main>
-     <FulcrumHeader />
-      
- <section className="lux-hero">
+    <main className="site">
+      <FulcrumHeader />
 
-  <div className="lux-left">
+      <section className="lux-hero" id="home">
+        <div className="lux-hero-copy">
+          <p className="lux-eyebrow">PREMIUM RESIDENTIAL GLASS</p>
 
-    <span className="lux-subtitle">
-      PREMIUM RESIDENTIAL GLASS
-    </span>
+          <h1>
+            Precision in
+            <br />
+            Every Pane.
+          </h1>
 
-    <h1>
-      Precision in <br />
-      Every Pane.
-    </h1>
+          <div className="lux-rule" />
 
-    <div className="lux-line"></div>
+          <p className="lux-description">
+            Crafted for spaces that value precision, permanence, and
+            understated elegance.
+          </p>
 
-    <p>
-      Crafted for spaces that value precision,
-      permanence, and understated elegance.
-    </p>
+          <div className="lux-actions">
+            <a href="#contact" className="lux-btn lux-btn-primary">
+              Request an Estimate <ArrowRight size={18} strokeWidth={1.8} />
+            </a>
 
-    <div className="lux-buttons">
-
-      <a href="#contact" className="lux-primary">
-        Request an Estimate
-      </a>
-
-      <a href="#services" className="lux-secondary">
-        View Services
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-      <section id="services" className="section">
-        <div className="container">
-          <div className="section-title">
-            <p className="eyebrow">What We Do</p>
-            <h2>Glass work with a refined finish.</h2>
-          </div>
-
-          <div className="service-grid">
-            {[
-              ["Frameless Shower Doors", "Custom shower glass systems measured, installed, and finished with precision."],
-              ["Custom Mirrors", "Clean mirror installations for bathrooms, vanities, walls, and interior spaces."],
-              ["Window Replacement", "Residential window glass replacement and installation with a clean professional finish."],
-              ["Tabletops & Custom Glass", "Custom glass tops, panels, shelves, and specialty pieces built to fit your space."],
-            ].map(([title, body]) => (
-              <article className="card" key={title}>
-                <CheckCircle2 className="card-icon" size={25} />
-                <h3>{title}</h3>
-                <p>{body}</p>
-              </article>
-            ))}
+            <a href="#services" className="lux-btn lux-btn-secondary">
+              View Services
+            </a>
           </div>
         </div>
       </section>
 
-      <section id="work" className="section featured">
-        <div className="container featured-inner">
-          <div>
-            <p className="eyebrow">Featured Work</p>
-            <h2>Built for clean lines, clear views, and lasting impressions.</h2>
-            <p>
-              From frameless shower enclosures to mirrors and custom glass details, every project should feel measured, intentional, and finished correctly.
-            </p>
-          </div>
-
-          <div className="work-grid">
-            {["Frameless Showers", "Custom Mirrors", "Window Glass", "Tabletops"].map((item) => (
-              <div className="work-tile" key={item}>
-                <p>{item}</p>
-              </div>
-            ))}
-          </div>
+      <section className="lux-proof-strip">
+        <div className="lux-proof-item">
+          <span className="lux-proof-icon">▧</span>
+          <span>QUALITY MATERIALS</span>
         </div>
-      </section>
 
-      <section id="about" className="section">
-        <div className="container about">
-          <div>
-            <p className="eyebrow">About Fulcrum Glass</p>
-            <h2>A premium glass specialist for modern residential spaces.</h2>
-          </div>
-
-          <div className="about-copy">
-            <p>
-              Fulcrum Glass specializes in frameless shower doors, custom mirrors, window replacement, tabletops, and precision glass installations.
-            </p>
-            <p>
-              The focus is simple: clean execution, accurate fit, professional communication, and a finished product that elevates the space without overcomplicating it.
-            </p>
-            <p className="strong">Veteran-owned. Detail-driven. Built on precision.</p>
-          </div>
+        <div className="lux-proof-item">
+          <span className="lux-proof-icon">◇</span>
+          <span>EXPERT CRAFTSMANSHIP</span>
         </div>
-      </section>
 
-      <section id="contact" className="section">
-        <div className="container contact-card">
-          <div className="contact-info">
-            <p className="eyebrow">Start Your Project</p>
-            <h2>Request an estimate.</h2>
-            <p>
-              Tell us what you need installed, replaced, or measured. Fulcrum Glass will follow up to review the project details.
-            </p>
+        <div className="lux-proof-item">
+          <span className="lux-proof-icon">□</span>
+          <span>TIMELESS DESIGN</span>
+        </div>
 
-            <div className="contact-list">
-              <div><Phone size={16} color="#1d3557" /> (267) 709-2590</div>
-              <div><Mail size={16} color="#1d3557" /> <a href="mailto:info@fulcrumglass.com">info@fulcrumglass.com</a></div>
-              <div><MapPin size={16} color="#1d3557" /> Philadelphia area and surrounding service areas</div>
-            </div>
-          </div>
-
-          <form className="contact-form" action="https://formspree.io/f/xykvpozp" method="POST">
-            <input name="name" placeholder="Name" required />
-            <input name="contact" placeholder="Phone / Email" required />
-            <select name="project_type" defaultValue="" required>
-              <option value="" disabled>Project Type</option>
-              <option>Frameless Shower Door</option>
-              <option>Custom Mirror</option>
-              <option>Window Replacement</option>
-              <option>Tabletop / Custom Glass</option>
-            </select>
-            <textarea name="message" placeholder="Project details" required />
-            <button className="btn" type="submit">Submit Request</button>
-          </form>
+        <div className="lux-proof-item">
+          <span className="lux-proof-icon">▱</span>
+          <span>BUILT TO LAST</span>
         </div>
       </section>
     </main>

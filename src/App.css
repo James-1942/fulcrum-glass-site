@@ -1,77 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #040a16;
+  color: #ffffff;
+  font-family: "Inter", Arial, sans-serif;
+}
+
+.site {
+  min-height: 100vh;
+  background: #040a16;
+}
+
 .lux-hero {
-  height: 100vh;
+  position: relative;
+  min-height: calc(100vh - 112px);
+  margin-top: 112px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
 
   background-image:
     linear-gradient(
       90deg,
-      rgba(4,10,22,0.92) 0%,
-      rgba(4,10,22,0.72) 35%,
-      rgba(4,10,22,0.15) 60%
+      rgba(4, 10, 22, 0.98) 0%,
+      rgba(4, 10, 22, 0.94) 28%,
+      rgba(4, 10, 22, 0.62) 43%,
+      rgba(4, 10, 22, 0.08) 62%,
+      rgba(4, 10, 22, 0.02) 100%
     ),
-    url('/hero-bathroom.png');
+    url("./assets/hero-bathroom.png");
 
   background-size: cover;
-  background-position: center;
+  background-position: center right;
+  background-repeat: no-repeat;
+}
 
+.lux-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 78% 52%, rgba(255, 190, 115, 0.13), transparent 30%),
+    radial-gradient(circle at 20% 42%, rgba(71, 121, 165, 0.20), transparent 36%);
+  pointer-events: none;
+}
+
+.lux-hero-copy {
+  position: relative;
+  z-index: 2;
+  width: min(600px, 44vw);
+  margin-left: clamp(54px, 5.2vw, 88px);
+  padding-bottom: 30px;
+}
+
+.lux-eyebrow {
+  margin: 0 0 36px;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: clamp(13px, 1.1vw, 18px);
+  letter-spacing: 0.34em;
+  font-weight: 500;
+}
+
+.lux-hero h1 {
+  margin: 0;
+  color: #ffffff;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(66px, 6.7vw, 118px);
+  line-height: 0.88;
+  font-weight: 500;
+  letter-spacing: -0.045em;
+  text-shadow: 0 10px 34px rgba(0, 0, 0, 0.28);
+}
+
+.lux-rule {
+  width: 116px;
+  height: 1px;
+  margin: 48px 0 34px;
+  background: rgba(255, 255, 255, 0.48);
+}
+
+.lux-description {
+  max-width: 545px;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: clamp(18px, 1.38vw, 26px);
+  line-height: 1.55;
+  font-weight: 400;
+}
+
+.lux-actions {
   display: flex;
   align-items: center;
-
-  padding-left: 90px;
+  gap: 26px;
+  margin-top: 54px;
 }
 
-.lux-left {
-  max-width: 650px;
-  color: white;
-}
-
-.lux-subtitle {
-  letter-spacing: 5px;
-  font-size: 0.9rem;
-  color: #8ea9d7;
-}
-
-.lux-left h1 {
-  font-size: 6.5rem;
-  line-height: 0.95;
-  font-weight: 400;
-  margin: 30px 0;
-
-  font-family: "Cormorant Garamond", serif;
-}
-
-.lux-line {
-  width: 90px;
-  height: 1px;
-  background: rgba(255,255,255,0.4);
-  margin-bottom: 30px;
-}
-
-.lux-left p {
-  font-size: 1.3rem;
-  line-height: 1.7;
-  color: rgba(255,255,255,0.82);
-  margin-bottom: 40px;
-}
-
-.lux-buttons {
-  display: flex;
-  gap: 22px;
-}
-
-.lux-primary,
-.lux-secondary {
-  text-decoration: none;
-  padding: 18px 34px;
+.lux-btn {
+  min-height: 66px;
+  padding: 0 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
   border-radius: 999px;
-  transition: 0.3s ease;
+  text-decoration: none;
+  font-size: clamp(14px, 0.95vw, 18px);
+  font-weight: 700;
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
 }
 
-.lux-primary {
-  background: #18345d;
-  color: white;
+.lux-btn:hover {
+  transform: translateY(-1px);
 }
 
-.lux-secondary {
-  border: 1px solid rgba(255,255,255,0.4);
-  color: white;
+.lux-btn-primary {
+  background: #123a68;
+  color: #ffffff;
+  border: 1px solid rgba(111, 149, 190, 0.34);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.28);
+}
+
+.lux-btn-secondary {
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.62);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.lux-proof-strip {
+  min-height: 126px;
+  padding: 0 clamp(34px, 5vw, 90px);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  background: linear-gradient(90deg, #04101f, #071321 52%, #04101f);
+  border-top: 1px solid rgba(255, 255, 255, 0.10);
+}
+
+.lux-proof-item {
+  min-height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  color: rgba(255, 255, 255, 0.86);
+  font-size: 15px;
+  letter-spacing: 0.22em;
+  font-weight: 500;
+  border-right: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.lux-proof-item:last-child {
+  border-right: none;
+}
+
+.lux-proof-icon {
+  font-size: 34px;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+@media (max-width: 960px) {
+  .lux-hero {
+    min-height: calc(100vh - 88px);
+    margin-top: 88px;
+    background-position: 62% center;
+  }
+
+  .lux-hero-copy {
+    width: min(560px, 86vw);
+    margin-left: 24px;
+  }
+
+  .lux-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .lux-proof-strip {
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+  }
+
+  .lux-proof-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+}
+
+@media (max-width: 640px) {
+  .lux-hero {
+    min-height: calc(100vh - 82px);
+    margin-top: 82px;
+    background-image:
+      linear-gradient(
+        90deg,
+        rgba(4, 10, 22, 0.98) 0%,
+        rgba(4, 10, 22, 0.88) 58%,
+        rgba(4, 10, 22, 0.42) 100%
+      ),
+      url("./assets/hero-bathroom.png");
+  }
+
+  .lux-hero-copy {
+    margin-left: 20px;
+    padding-right: 18px;
+  }
+
+  .lux-hero h1 {
+    font-size: 62px;
+  }
+
+  .lux-description {
+    font-size: 17px;
+  }
+
+  .lux-btn {
+    width: 100%;
+    min-height: 58px;
+  }
+
+  .lux-proof-strip {
+    grid-template-columns: 1fr;
+  }
+
+  .lux-proof-item {
+    justify-content: flex-start;
+    padding-left: 16px;
+    border-right: none;
+  }
 }

@@ -3,49 +3,45 @@ import "./FulcrumHeader.css";
 
 export default function FulcrumHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <>
-      <header className="fg-header-lux">
-        <div className="fg-header-inner-lux">
+      <header className="fg-topbar">
+        <div className="fg-topbar-inner">
+          <a href="/" className="fg-logo-lockup" aria-label="Fulcrum Glass home">
+            <img src="/fulcrum-logo-exact-website.png" alt="" className="fg-mark" />
 
-          <a href="/" className="fg-brand-lux">
-            <img
-              src="/fulcrum-logo-exact-website.png"
-              alt="Fulcrum Glass"
-            />
+            <span className="fg-logo-divider" />
 
-            <div className="fg-brand-divider"></div>
-
-            <div className="fg-brand-text">
-              <span>FULCRUM GLASS</span>
-            </div>
+            <span className="fg-wordmark">FULCRUM GLASS</span>
           </a>
 
-          <div className="fg-header-actions">
-
-            <a href="#contact" className="fg-estimate-btn">
+          <div className="fg-topbar-actions">
+            <a href="#contact" className="fg-outline-cta">
               REQUEST AN ESTIMATE
             </a>
 
             <button
-              className={`fg-menu-btn ${menuOpen ? "open" : ""}`}
-              onClick={() => setMenuOpen(!menuOpen)}
+              type="button"
+              className={`fg-hamburger ${menuOpen ? "is-open" : ""}`}
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={menuOpen}
+              onClick={() => setMenuOpen((open) => !open)}
             >
-              <span></span>
-              <span></span>
-              <span></span>
+              <span />
+              <span />
+              <span />
             </button>
-
           </div>
         </div>
       </header>
 
-      <div className={`fg-slide-menu ${menuOpen ? "show" : ""}`}>
-        <a href="#services">Services</a>
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+      <div className={`fg-menu-drawer ${menuOpen ? "is-open" : ""}`}>
+        <a href="#services" onClick={closeMenu}>Services</a>
+        <a href="#work" onClick={closeMenu}>Work</a>
+        <a href="#about" onClick={closeMenu}>About</a>
+        <a href="#contact" onClick={closeMenu}>Contact</a>
       </div>
     </>
   );

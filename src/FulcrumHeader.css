@@ -1,119 +1,188 @@
-.fg-header-lux {
+.fg-topbar {
   position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
-  z-index: 999;
-  background: rgba(4, 10, 22, 0.92);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  height: 112px;
+  z-index: 1000;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(35, 70, 100, 0.18), transparent 34%),
+    linear-gradient(90deg, #050c17 0%, #08111e 45%, #07101c 100%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.24);
 }
 
-.fg-header-inner-lux {
-  height: 112px;
+.fg-topbar-inner {
+  height: 100%;
   max-width: 1600px;
   margin: 0 auto;
-  padding: 0 48px;
-
+  padding: 0 clamp(34px, 5vw, 88px);
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.fg-brand-lux {
+.fg-logo-lockup {
   display: flex;
   align-items: center;
-  gap: 26px;
+  gap: 30px;
   text-decoration: none;
 }
 
-.fg-brand-lux img {
-  width: 82px;
+.fg-mark {
+  width: 70px;
   height: auto;
+  display: block;
+  object-fit: contain;
 }
 
-.fg-brand-divider {
+.fg-logo-divider {
   width: 1px;
-  height: 70px;
-  background: rgba(255,255,255,0.3);
+  height: 74px;
+  background: rgba(255, 255, 255, 0.40);
 }
 
-.fg-brand-text span {
-  color: white;
-  letter-spacing: 10px;
-  font-size: 2rem;
-  font-weight: 300;
+.fg-wordmark {
+  color: #ffffff;
+  font-size: clamp(22px, 2.1vw, 36px);
+  letter-spacing: 0.34em;
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
 }
 
-.fg-header-actions {
+.fg-topbar-actions {
   display: flex;
   align-items: center;
-  gap: 36px;
+  gap: clamp(24px, 3.8vw, 54px);
 }
 
-.fg-estimate-btn {
-  border: 1px solid rgba(255,255,255,0.35);
-  color: white;
+.fg-outline-cta {
+  min-width: 284px;
+  height: 66px;
+  padding: 0 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.34);
   text-decoration: none;
-
-  padding: 18px 34px;
-  letter-spacing: 2px;
-  font-size: 0.8rem;
-
-  transition: 0.3s ease;
+  font-size: 14px;
+  letter-spacing: 0.22em;
+  font-weight: 500;
+  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
 }
 
-.fg-estimate-btn:hover {
-  background: white;
-  color: black;
+.fg-outline-cta:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.56);
+  transform: translateY(-1px);
 }
 
-.fg-menu-btn {
-  width: 48px;
-  height: 48px;
-
+.fg-hamburger {
+  width: 54px;
+  height: 54px;
+  padding: 0;
+  border: 0;
   background: transparent;
-  border: none;
-  cursor: pointer;
-
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   justify-content: center;
-  gap: 6px;
+  gap: 8px;
+  cursor: pointer;
 }
 
-.fg-menu-btn span {
-  width: 32px;
+.fg-hamburger span {
+  width: 36px;
   height: 2px;
-  background: white;
+  display: block;
+  background: rgba(255, 255, 255, 0.86);
+  transition: transform 180ms ease, opacity 180ms ease;
 }
 
-.fg-slide-menu {
+.fg-hamburger.is-open span:nth-child(1) {
+  transform: translateY(10px) rotate(45deg);
+}
+
+.fg-hamburger.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.fg-hamburger.is-open span:nth-child(3) {
+  transform: translateY(-10px) rotate(-45deg);
+}
+
+.fg-menu-drawer {
   position: fixed;
   top: 112px;
-  right: -320px;
-
-  width: 320px;
-  height: 100vh;
-
-  background: #08101f;
-
-  padding: 60px 40px;
-
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
-
-  transition: 0.4s ease;
-  z-index: 998;
-}
-
-.fg-slide-menu.show {
   right: 0;
+  z-index: 999;
+  width: min(360px, 88vw);
+  padding: 32px;
+  background: rgba(5, 12, 23, 0.96);
+  border-left: 1px solid rgba(255, 255, 255, 0.16);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  transform: translateX(100%);
+  transition: transform 220ms ease;
+  display: grid;
+  gap: 12px;
 }
 
-.fg-slide-menu a {
-  color: white;
+.fg-menu-drawer.is-open {
+  transform: translateX(0);
+}
+
+.fg-menu-drawer a {
+  color: rgba(255, 255, 255, 0.88);
   text-decoration: none;
-  font-size: 1rem;
-  letter-spacing: 3px;
+  padding: 16px 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 15px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .fg-topbar {
+    height: 88px;
+  }
+
+  .fg-mark {
+    width: 52px;
+  }
+
+  .fg-logo-divider {
+    height: 54px;
+  }
+
+  .fg-wordmark {
+    font-size: 20px;
+    letter-spacing: 0.22em;
+  }
+
+  .fg-outline-cta {
+    display: none;
+  }
+
+  .fg-menu-drawer {
+    top: 88px;
+  }
+}
+
+@media (max-width: 560px) {
+  .fg-topbar-inner {
+    padding: 0 20px;
+  }
+
+  .fg-logo-lockup {
+    gap: 16px;
+  }
+
+  .fg-wordmark {
+    font-size: 16px;
+    letter-spacing: 0.16em;
+  }
+
+  .fg-mark {
+    width: 46px;
+  }
 }
