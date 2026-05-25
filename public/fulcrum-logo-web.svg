@@ -1,0 +1,22 @@
+<svg width="220" height="54" viewBox="0 0 220 54" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fulcrum Glass">
+  <defs>
+    <linearGradient id="glassEdge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F4F1EA"/>
+      <stop offset="42%" stop-color="#BFC7CB"/>
+      <stop offset="100%" stop-color="#5D7F8C"/>
+    </linearGradient>
+  </defs>
+  <g transform="translate(4 5)">
+    <path d="M21 4H58L49 13H25L18 20V43L9 48V17L21 4Z" fill="url(#glassEdge)"/>
+    <path d="M25 18H52L44 27H25V18Z" fill="#D9DEE1"/>
+    <path d="M10 18L18 20V43L10 48V18Z" fill="#8FA4AD"/>
+    <path d="M21 4H58L49 13H25L18 20L10 18L21 4Z" stroke="#2B3438" stroke-width="1.1"/>
+    <path d="M25 18H52L44 27H25V18Z" stroke="#2B3438" stroke-width="1.1"/>
+  </g>
+  <g transform="translate(78 15)">
+    <text x="0" y="12" fill="#1F2933" font-family="Montserrat, Inter, Arial, sans-serif" font-size="17" font-weight="500" letter-spacing="7">FULCRUM</text>
+    <line x1="0" y1="25" x2="34" y2="25" stroke="#8EA6B8" stroke-width="1"/>
+    <text x="45" y="29" fill="#3A4248" font-family="Montserrat, Inter, Arial, sans-serif" font-size="11" font-weight="400" letter-spacing="7">GLASS</text>
+    <line x1="103" y1="25" x2="138" y2="25" stroke="#8EA6B8" stroke-width="1"/>
+  </g>
+</svg>
