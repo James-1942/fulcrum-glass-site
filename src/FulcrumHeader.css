@@ -24,16 +24,17 @@
 .fg-logo-lockup {
   display: flex;
   align-items: center;
-  gap: 18px;
+  gap: 14px;
   text-decoration: none;
 }
 
 .fg-mark {
-  width: 115px;
+  width: 300px;
   height: auto;
   display: block;
   object-fit: contain;
-  margin-top: 14px;
+  margin-top: 18px;
+  margin-right: -72px;
   filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.28));
 }
 
@@ -41,7 +42,7 @@
   width: 1px;
   height: 74px;
   background: rgba(255, 255, 255, 0.40);
-  margin-left: 8px;
+  margin-left: 0;
 }
 
 .fg-wordmark {
