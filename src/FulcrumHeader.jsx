@@ -39,7 +39,7 @@ export default function FulcrumHeader() {
 
       <div className={`fg-menu-drawer ${menuOpen ? "is-open" : ""}`}>
         <a href="#services" onClick={closeMenu}>Services</a>
-        <a href="#work" onClick={closeMenu}>Work</a>
+        <a href="#showcase" onClick={closeMenu}>Work</a>
         <a href="#about" onClick={closeMenu}>About</a>
         <a href="#contact" onClick={closeMenu}>Contact</a>
       </div>
