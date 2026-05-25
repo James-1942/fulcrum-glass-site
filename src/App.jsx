@@ -21,8 +21,7 @@ export default function App() {
           <div className="lux-rule" />
 
           <p className="lux-description">
-            Crafted for spaces that value precision, permanence, and
-            understated elegance.
+            Crafted for spaces that value precision, permanence, and understated elegance.
           </p>
 
           <div className="lux-actions">

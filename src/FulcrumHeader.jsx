@@ -10,7 +10,7 @@ export default function FulcrumHeader() {
       <header className="fg-topbar">
         <div className="fg-topbar-inner">
           <a href="/" className="fg-logo-lockup" aria-label="Fulcrum Glass home">
-            <img src="/fulcrum-logo-exact-website.png" alt="" className="fg-mark" />
+            <img src="/fulcrum-mark-only.png" alt="Fulcrum Glass" className="fg-mark" />
 
             <span className="fg-logo-divider" />
 
