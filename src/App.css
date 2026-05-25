@@ -22,8 +22,8 @@ body {
 
 .lux-hero {
   position: relative;
-  min-height: calc(100vh - 112px);
-  margin-top: 112px;
+  min-height: calc(100vh - 128px);
+  margin-top: 128px;
   display: flex;
   align-items: center;
   overflow: hidden;
