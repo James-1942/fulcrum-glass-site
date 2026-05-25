@@ -6,19 +6,8 @@ import FulcrumHeader from "./FulcrumHeader";
 export default function App() {
   return (
     <main>
-      <header className="site-header">
-        <div className="container header-inner">
-          <a href="#" className="brand">Fulcrum Glass</a>
-          <nav className="nav">
-            <a href="#services">Services</a>
-            <a href="#work">Work</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-          </nav>
-          <a href="#contact" className="btn btn-primary">Request Estimate</a>
-        </div>
-      </header>
-
+     <FulcrumHeader />
+      
       <section className="hero">
         <img src={heroImage} alt="Luxury bathroom with frameless glass shower enclosure" className="hero-img" />
         <div className="hero-overlay" />
