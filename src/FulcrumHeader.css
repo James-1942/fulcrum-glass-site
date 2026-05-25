@@ -190,3 +190,41 @@
     width: 58px;
   }
 }
+
+@media (max-width: 768px) {
+  .fg-topbar {
+    height: 96px;
+  }
+
+  .fg-topbar-inner {
+    padding: 0 38px;
+  }
+
+  .fg-logo-lockup {
+    gap: 14px;
+  }
+
+  .fg-mark {
+    width: 72px;
+    margin-top: 0;
+    margin-right: 0;
+  }
+
+  .fg-brand-divider {
+    height: 58px;
+  }
+
+  .fg-wordmark {
+    font-size: 22px;
+    letter-spacing: 0.2em;
+    white-space: nowrap;
+  }
+
+  .fg-cta {
+    display: none;
+  }
+
+  .fg-menu-button {
+    width: 70px;
+  }
+}
