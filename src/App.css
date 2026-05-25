@@ -236,3 +236,54 @@ background-image:
     border-right: none;
   }
 }
+
+@media (max-width: 768px) {
+  .lux-hero {
+    margin-top: 96px;
+    min-height: calc(100vh - 96px);
+  }
+
+  .lux-hero-bg {
+    background-position: 62% center;
+    opacity: 0.72;
+  }
+
+  .lux-hero::before {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(3, 9, 18, 0.92) 0%,
+        rgba(3, 9, 18, 0.72) 44%,
+        rgba(3, 9, 18, 0.25) 100%
+      );
+  }
+
+  .lux-hero-content {
+    padding: 76px 38px 64px;
+  }
+
+  .lux-kicker {
+    font-size: 14px;
+    letter-spacing: 0.34em;
+  }
+
+  .lux-hero-title {
+    font-size: clamp(56px, 14vw, 82px);
+    line-height: 0.95;
+  }
+
+  .lux-hero-copy {
+    font-size: 22px;
+    line-height: 1.45;
+    max-width: 680px;
+  }
+
+  .lux-actions {
+    width: 100%;
+  }
+
+  .lux-primary,
+  .lux-secondary {
+    width: 100%;
+  }
+}
