@@ -93,7 +93,7 @@ export default function App() {
   </div>
 </section>
 
-<section id="work" className="fg-section fg-work">
+<section id="Showcase" className="fg-section fg-Showcase">
   <div className="fg-section-heading">
     <span className="fg-eyebrow">PORTFOLIO</span>
     <h2>Selected Installations</h2>
