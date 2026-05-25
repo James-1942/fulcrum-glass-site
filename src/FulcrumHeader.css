@@ -34,9 +34,10 @@
 }
 
 .fg-brand img {
-  width: 214px;
+  width: 125px;
   height: auto;
   display: block;
+  object-fit: contain;
 }
 
 .fg-nav {
