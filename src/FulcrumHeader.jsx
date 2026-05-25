@@ -5,7 +5,7 @@ export default function FulcrumHeader() {
     <header className="fg-header">
       <div className="fg-header-inner">
         <a href="/" className="fg-brand" aria-label="Fulcrum Glass home">
-          <img src="/fulcrum-logo-web.svg" alt="Fulcrum Glass" />
+           <img src="/fulcrum-logo-exact-website.png" alt="Fulcrum Glass" />
         </a>
 
         <nav className="fg-nav" aria-label="Primary navigation">
