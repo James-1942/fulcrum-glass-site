@@ -36,8 +36,7 @@ body {
     rgba(4, 10, 22, 0.62) 43%,
     rgba(4, 10, 22, 0.08) 62%,
     rgba(4, 10, 22, 0.02) 100%
-  ),
-  url("./assets/hero-bathroom.png");
+  );
 
   background-size: cover;
   background-position: center right;
