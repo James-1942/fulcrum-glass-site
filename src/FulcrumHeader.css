@@ -205,10 +205,10 @@
   }
 
 .fg-mark {
-  width: 58px;
+  width: 75px;
   margin-top: 0;
   margin-right: -10px;
-  transform: scale(1.45);
+  transform: scale(2.50);
   transform-origin: left center;
 }
 
