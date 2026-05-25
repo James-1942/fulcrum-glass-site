@@ -44,16 +44,6 @@ body {
   background-repeat: no-repeat;
 }
 
-.lux-hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    radial-gradient(circle at 78% 52%, rgba(255, 190, 115, 0.13), transparent 30%),
-    radial-gradient(circle at 20% 42%, rgba(71, 121, 165, 0.20), transparent 36%);
-  pointer-events: none;
-}
-
 .lux-hero-copy {
   position: relative;
   z-index: 2;
