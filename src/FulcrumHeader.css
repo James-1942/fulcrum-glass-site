@@ -204,11 +204,13 @@
     gap: 14px;
   }
 
-  .fg-mark {
-    width: 100px;
-    margin-top: 0;
-    margin-right: 0;
-  }
+.fg-mark {
+  width: 58px;
+  margin-top: 0;
+  margin-right: -10px;
+  transform: scale(1.45);
+  transform-origin: left center;
+}
 
   .fg-brand-divider {
     height: 58px;
