@@ -2,6 +2,7 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import "./App.css";
 import FulcrumHeader from "./FulcrumHeader";
+import "./index.css";
 
 export default function App() {
   return (
