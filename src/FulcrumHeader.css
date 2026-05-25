@@ -1,0 +1,198 @@
+:root {
+  --fg-charcoal: #0d1012;
+  --fg-ink: #16212d;
+  --fg-stone: #f4f1ea;
+  --fg-cream: rgba(248, 247, 242, 0.92);
+  --fg-line: rgba(244, 241, 234, 0.12);
+  --fg-blue: #1f3f66;
+  --fg-blue-soft: #6f95be;
+  --fg-silver: #c7cdd3;
+}
+
+.fg-header-v2 {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background:
+    linear-gradient(90deg, rgba(13, 16, 18, 0.94), rgba(22, 33, 45, 0.90)),
+    rgba(13, 16, 18, 0.92);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(111, 149, 190, 0.24);
+  box-shadow: 0 18px 40px rgba(13, 16, 18, 0.16);
+}
+
+.fg-header-v2-inner {
+  max-width: 1240px;
+  height: 92px;
+  margin: 0 auto;
+  padding: 0 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fg-brand-v2 {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.fg-brand-v2 img {
+  width: 238px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.28));
+}
+
+.fg-actions-v2 {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.fg-header-cta-v2 {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 24px;
+  border-radius: 999px;
+  background: rgba(244, 241, 234, 0.95);
+  color: #142235;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  box-shadow: 0 16px 34px rgba(0, 0, 0, 0.18);
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.fg-header-cta-v2:hover {
+  transform: translateY(-1px);
+  background: #ffffff;
+  box-shadow: 0 20px 42px rgba(0, 0, 0, 0.25);
+}
+
+.fg-menu-button-v2 {
+  width: 50px;
+  height: 44px;
+  border: 1px solid rgba(199, 205, 211, 0.26);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  cursor: pointer;
+  transition: background 180ms ease, border-color 180ms ease, transform 180ms ease;
+}
+
+.fg-menu-button-v2 span {
+  width: 19px;
+  height: 1.5px;
+  border-radius: 999px;
+  background: #c7cdd3;
+  display: block;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.fg-menu-button-v2:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.10);
+  border-color: rgba(111, 149, 190, 0.55);
+}
+
+.fg-menu-button-v2.is-open span:nth-child(1) {
+  transform: translateY(6.5px) rotate(45deg);
+}
+
+.fg-menu-button-v2.is-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.fg-menu-button-v2.is-open span:nth-child(3) {
+  transform: translateY(-6.5px) rotate(-45deg);
+}
+
+.fg-menu-panel-v2 {
+  position: fixed;
+  top: 92px;
+  right: 34px;
+  z-index: 90;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.fg-menu-panel-v2.is-open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.fg-menu-card-v2 {
+  width: 280px;
+  padding: 18px;
+  border-radius: 24px;
+  background: rgba(13, 16, 18, 0.94);
+  border: 1px solid rgba(111, 149, 190, 0.24);
+  box-shadow: 0 28px 60px rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  display: grid;
+  gap: 4px;
+}
+
+.fg-menu-card-v2 a {
+  padding: 14px 14px;
+  border-radius: 14px;
+  color: rgba(244, 241, 234, 0.88);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.fg-menu-card-v2 a:hover {
+  background: rgba(255, 255, 255, 0.07);
+  color: #ffffff;
+}
+
+.fg-menu-card-v2 .fg-menu-cta-v2 {
+  margin-top: 8px;
+  text-align: center;
+  background: rgba(111, 149, 190, 0.18);
+  color: #ffffff;
+  border: 1px solid rgba(111, 149, 190, 0.26);
+}
+
+@media (max-width: 820px) {
+  .fg-header-v2-inner {
+    height: 82px;
+    padding: 0 18px;
+  }
+
+  .fg-brand-v2 img {
+    width: 194px;
+  }
+
+  .fg-header-cta-v2 {
+    display: none;
+  }
+
+  .fg-menu-panel-v2 {
+    top: 82px;
+    left: 18px;
+    right: 18px;
+  }
+
+  .fg-menu-card-v2 {
+    width: auto;
+  }
+}
