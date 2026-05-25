@@ -1,6 +1,7 @@
 import React from "react";
 import { ArrowRight, CheckCircle2, Phone, Mail, MapPin } from "lucide-react";
 import heroImage from "./assets/hero-bathroom.png";
+import FulcrumHeader from "./FulcrumHeader";
 
 export default function App() {
   return (
