@@ -8,26 +8,43 @@ export default function App() {
     <main>
      <FulcrumHeader />
       
-      <section className="hero">
-        <img src={heroImage} alt="Luxury bathroom with frameless glass shower enclosure" className="hero-img" />
-        <div className="hero-overlay" />
-        <div className="container hero-content">
-          <div>
-            <p className="eyebrow">Premium Residential Glass</p>
-            <h1>Precision in Every Pane</h1>
-            <div className="rule" />
-            <p className="hero-copy">
-              Crafted for spaces that value precision, permanence, and understated elegance.
-            </p>
-            <div className="hero-actions">
-              <a href="#contact" className="btn btn-primary">
-                Request an Estimate <ArrowRight size={16} style={{ marginLeft: 8 }} />
-              </a>
-              <a href="#services" className="btn btn-secondary">View Services</a>
-            </div>
-          </div>
-        </div>
-      </section>
+ <section className="lux-hero">
+
+  <div className="lux-overlay"></div>
+
+  <div className="lux-left">
+
+    <span className="lux-subtitle">
+      PREMIUM RESIDENTIAL GLASS
+    </span>
+
+    <h1>
+      Precision in <br />
+      Every Pane.
+    </h1>
+
+    <div className="lux-line"></div>
+
+    <p>
+      Crafted for spaces that value precision,
+      permanence, and understated elegance.
+    </p>
+
+    <div className="lux-buttons">
+
+      <a href="#contact" className="lux-primary">
+        Request an Estimate
+      </a>
+
+      <a href="#services" className="lux-secondary">
+        View Services
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
 
       <section id="services" className="section">
         <div className="container">
