@@ -10,8 +10,6 @@ export default function App() {
       
  <section className="lux-hero">
 
-  <div className="lux-overlay"></div>
-
   <div className="lux-left">
 
     <span className="lux-subtitle">
