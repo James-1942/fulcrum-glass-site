@@ -18,7 +18,7 @@
 
 .fg-header-inner {
   max-width: 1180px;
-  height: 64px;
+  height: 72px;
   margin: 0 auto;
   padding: 0 28px;
   display: grid;
@@ -34,7 +34,7 @@
 }
 
 .fg-brand img {
-  width: 125px;
+  width: 185px;
   height: auto;
   display: block;
   object-fit: contain;
