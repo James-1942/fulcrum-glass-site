@@ -32,7 +32,7 @@
   width: 300px;
   height: auto;
   display: block;
-  object-fit: contain;
+  object-fit: fit;
   filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.28));
 }
 
