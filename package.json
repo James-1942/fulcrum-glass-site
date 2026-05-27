@@ -9,7 +9,7 @@
     "vite": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "lucide-react": "latest"
+    "lucide-react": "latest",
     "react-router-dom": "^7.9.1"
   },
   "devDependencies": {}
