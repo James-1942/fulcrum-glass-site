@@ -1,0 +1,57 @@
+.fg-service-hero {
+  min-height: 92vh;
+  margin-top: 128px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 120px clamp(28px, 7vw, 110px);
+  background:
+    linear-gradient(
+      90deg,
+      rgba(3, 8, 17, 0.94) 0%,
+      rgba(3, 8, 17, 0.72) 42%,
+      rgba(3, 8, 17, 0.28) 100%
+    ),
+    url("../assets/hero-bathroom.png");
+  background-size: cover;
+  background-position: center;
+  color: #fff8eb;
+}
+
+.fg-service-content {
+  position: relative;
+  z-index: 2;
+  max-width: 860px;
+}
+
+.fg-service-content h1 {
+  margin: 0;
+  font-size: clamp(56px, 7vw, 110px);
+  line-height: 0.92;
+  letter-spacing: -0.06em;
+}
+
+.fg-service-content p {
+  max-width: 620px;
+  margin: 28px 0 36px;
+  color: rgba(255, 248, 235, 0.76);
+  font-size: 21px;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .fg-service-hero {
+    margin-top: 96px;
+    min-height: calc(100vh - 96px);
+    padding: 86px 34px;
+    background-position: 68% center;
+  }
+
+  .fg-service-content h1 {
+    font-size: clamp(52px, 14vw, 82px);
+  }
+
+  .fg-service-content p {
+    font-size: 19px;
+  }
+}
