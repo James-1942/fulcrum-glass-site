@@ -3,16 +3,21 @@ import { Routes, Route } from "react-router-dom";
 
 import HomePage from "./pages/HomePage";
 import ShowerGlass from "./pages/ShowerGlass";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
   return (
-    <Routes>
-      <Route path="/" element={<HomePage />} />
+    <>
+      <ScrollToTop />
 
-      <Route
-        path="/services/shower-glass"
-        element={<ShowerGlass />}
-      />
-    </Routes>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+
+        <Route
+          path="/services/shower-glass"
+          element={<ShowerGlass />}
+        />
+      </Routes>
+    </>
   );
 }
