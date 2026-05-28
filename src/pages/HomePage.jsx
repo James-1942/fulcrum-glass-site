@@ -2,6 +2,7 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import "../App.css";
 import FulcrumHeader from "../FulcrumHeader";
+import { Link } from "react-router-dom";
 
 export default function App() {
   return (
@@ -85,9 +86,18 @@ export default function App() {
       ["Specialty Glass Applications", "Architectural and custom glass solutions for shelving, partitions, cabinet glass, and unique residential projects."]
     ].map(([title, text]) => (
       <article className="fg-service-card" key={title}>
-        <span>{title}</span>
-        <p>{text}</p>
-      </article>
+  {title === "Frameless Shower Enclosures" ? (
+    <Link to="/services/shower-glass" className="fg-service-link">
+      <span>{title}</span>
+      <p>{text}</p>
+    </Link>
+  ) : (
+    <>
+      <span>{title}</span>
+      <p>{text}</p>
+    </>
+  )}
+</article>
     ))}
   </div>
 </section>
