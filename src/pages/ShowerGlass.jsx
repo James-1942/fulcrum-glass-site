@@ -1,6 +1,7 @@
 import React from "react";
 import FulcrumHeader from "../FulcrumHeader";
 import "../App.css";
+import "./ServicePage.css";
 
 export default function ShowerGlass() {
   return (
