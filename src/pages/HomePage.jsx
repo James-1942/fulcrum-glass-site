@@ -160,3 +160,6 @@ export default function App() {
     </a>
   </div>
 </section>
+      </main>
+  );
+}
