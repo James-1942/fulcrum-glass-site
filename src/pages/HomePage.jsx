@@ -161,18 +161,29 @@ export default function App() {
   </div>
 </section>
 
-<section className="fg-section fg-home-preview">
-  <div className="fg-section-heading">
+<section className="fg-section fg-home-about">
+  <div className="fg-about-card">
     <span className="fg-eyebrow">VETERAN OWNED</span>
+
     <h2>Built on Discipline. Defined by Craftsmanship.</h2>
+
     <p>
-      Fulcrum Glass brings precision, accountability, and clean execution to
-      every residential glass installation.
+      Fulcrum Glass delivers custom residential glass installations with a focus
+      on precision, accountability, and clean execution. Every project is handled
+      with care, from first measurement to final installation.
     </p>
 
-   <Link to="/about" className="lux-btn lux-btn-secondary">
-  About Fulcrum Glass
-</Link>
+    <div className="fg-veteran-badge">
+      <strong>Premium Residential Glass</strong>
+      <p>
+        Shower enclosures, mirrors, window glass, tabletops, and specialty glass
+        solutions crafted for refined living spaces.
+      </p>
+    </div>
+
+    <Link to="/about" className="lux-btn lux-btn-secondary">
+      About Fulcrum Glass
+    </Link>
   </div>
 </section>
 
