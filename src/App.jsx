@@ -15,27 +15,13 @@ export default function App() {
       <ScrollToTop />
 
       <Routes>
-  <Route path="/" element={<HomePage />} />
-
-  <Route
-    path="/services/shower-glass"
-    element={<ShowerGlass />}
-  />
-
-  <Route
-    path="/services/custom-mirrors"
-    element={<CustomMirrors />}
-  />
-  <Route 
-    path="/services/window-glass-solutions" 
-    element={<WindowGlass />} />
-   </Routes>
-    <Route 
-      path="/services/glass-tabletops" 
-      element={<GlassTabletops />} />
-    <Route 
-      path="/services/specialty-glass" 
-      element={<SpecialtyGlass />} />
+        <Route path="/" element={<HomePage />} />
+        <Route path="/services/shower-glass" element={<ShowerGlass />} />
+        <Route path="/services/custom-mirrors" element={<CustomMirrors />} />
+        <Route path="/services/window-glass-solutions" element={<WindowGlass />} />
+        <Route path="/services/glass-tabletops" element={<GlassTabletops />} />
+        <Route path="/services/specialty-glass" element={<SpecialtyGlass />} />
+      </Routes>
     </>
   );
 }
