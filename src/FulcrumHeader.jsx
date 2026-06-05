@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./FulcrumHeader.css";
 
 export default function FulcrumHeader() {
@@ -9,18 +10,18 @@ export default function FulcrumHeader() {
     <>
       <header className="fg-topbar">
         <div className="fg-topbar-inner">
-          <a href="/" className="fg-logo-lockup" aria-label="Fulcrum Glass home">
+         <Link to="/" className="fg-logo-lockup" aria-label="Fulcrum Glass home">
             <img src="/fulcrum-mark-only.png" alt="Fulcrum Glass" className="fg-mark" />
 
             <span className="fg-logo-divider" />
 
             <span className="fg-wordmark">FULCRUM GLASS</span>
-          </a>
+          </Link>
 
           <div className="fg-topbar-actions">
-            <a href="#contact" className="fg-outline-cta">
-              REQUEST AN ESTIMATE
-            </a>
+          <Link to="/contact" className="fg-outline-cta">
+            REQUEST AN ESTIMATE
+          </Link>
 
             <button
               type="button"
@@ -38,10 +39,10 @@ export default function FulcrumHeader() {
       </header>
 
       <div className={`fg-menu-drawer ${menuOpen ? "is-open" : ""}`}>
-        <a href="#services" onClick={closeMenu}>Services</a>
-        <a href="#showcase" onClick={closeMenu}>Showcase</a>
-        <a href="#about" onClick={closeMenu}>About</a>
-        <a href="#contact" onClick={closeMenu}>Contact</a>
+        <Link to="/services" onClick={closeMenu}>Services</Link>
+        <Link to="/showcase" onClick={closeMenu}>Showcase</Link>
+        <Link to="/about" onClick={closeMenu}>About</Link>
+        <Link to="/contact" onClick={closeMenu}>Contact</Link>
       </div>
     </>
   );
