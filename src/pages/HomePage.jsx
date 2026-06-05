@@ -101,115 +101,62 @@ export default function App() {
 </div>
 </section>
 
-<section id="Showcase" className="fg-section fg-showcase">
+<section className="fg-section fg-home-preview">
+  <div className="fg-section-heading">
+    <span className="fg-eyebrow">SERVICES</span>
+    <h2>Architectural Glass Services</h2>
+    <p>
+      Explore premium residential glass solutions including shower enclosures,
+      mirrors, windows, tabletops, and specialty glass applications.
+    </p>
+
+    <a href="/services" className="lux-btn lux-btn-primary">
+      View Services
+    </a>
+  </div>
+</section>
+
+<section className="fg-section fg-home-preview">
   <div className="fg-section-heading">
     <span className="fg-eyebrow">SHOWCASE</span>
     <h2>Selected Installations</h2>
     <p>
-      A curated look at residential glass installations designed around
-      precision, clean lines, and refined craftsmanship.
+      View a curated collection of residential glass installations designed
+      around precision, clean lines, and refined craftsmanship.
     </p>
-  </div>
 
-  <div className="fg-showcase-grid">
-{[
-  [
-    "Frameless Shower Enclosure",
-    "Shower Glass",
-    "Clean frameless lines with a refined architectural finish.",
-    showerImage
-  ],
-  [
-    "Custom Vanity Mirror",
-    "Custom Mirrors",
-    "Tailored mirror work designed to complement finished interiors.",
-    mirrorImage
-  ],
-  [
-    "Window Glass Replacement",
-    "Window Solutions",
-    "Residential glass replacement completed with precision and care.",
-    windowImage
-  ],
-  [
-    "Glass Tabletop",
-    "Tabletops",
-    "Custom-cut protective glass with polished presentation.",
-    tabletopImage
-  ],
-  [
-    "Mirror Wall Installation",
-    "Custom Mirrors",
-    "Large-format mirror installation for a clean expanded feel.",
-    mirrorWallImage
-  ],
-  [
-    "Specialty Glass Detail",
-    "Specialty Glass",
-    "Custom glass applications built around unique residential spaces.",
-    specialtyImage
-  ]
-].map(([title, category, text, image]) => (
-  <article className="fg-showcase-card" key={title}>
-    <div
-      className="fg-showcase-image"
-      style={{ backgroundImage: `url(${image})` }}
-    />
-
-    <div className="fg-showcase-info">
-      <span>{category}</span>
-      <h3>{title}</h3>
-      <p>{text}</p>
-    </div>
-  </article>
-))}
+    <a href="/showcase" className="lux-btn lux-btn-secondary">
+      View Showcase
+    </a>
   </div>
 </section>
 
-<section id="about" className="fg-section fg-about">
-  <div className="fg-about-card">
-    <span className="fg-eyebrow">ABOUT</span>
-    <h2>Craftsmanship Without Compromise</h2>
+<section className="fg-section fg-home-preview">
+  <div className="fg-section-heading">
+    <span className="fg-eyebrow">VETERAN OWNED</span>
+    <h2>Built on Discipline. Defined by Craftsmanship.</h2>
     <p>
-      Fulcrum Glass was built around precision, clean execution, and attention
-      to detail. Every installation is approached with a focus on balance,
-      longevity, and refined residential craftsmanship.
+      Fulcrum Glass brings precision, accountability, and clean execution to
+      every residential glass installation.
     </p>
 
-    <div className="fg-veteran-badge">
-      <strong>Veteran Owned & Operated</strong>
-      <p>
-        Built on discipline, precision, and accountability — values carried into
-        every installation and every detail.
-      </p>
-    </div>
+    <a href="/about" className="lux-btn lux-btn-secondary">
+      About Fulcrum Glass
+    </a>
   </div>
 </section>
 
-<section id="contact" className="fg-section fg-contact">
+<section className="fg-section fg-home-cta">
   <div className="fg-section-heading">
     <span className="fg-eyebrow">ESTIMATE</span>
-    <h2>Request an Estimate</h2>
-    <p>Tell us about your project and we’ll help bring the right glass solution into focus.</p>
-  </div>
+    <h2>Ready to Start Your Project?</h2>
+    <p>
+      Tell us about your space and we’ll help bring the right glass solution
+      into focus.
+    </p>
 
-  <form className="fg-contact-form">
-    <input placeholder="Name" />
-    <input placeholder="Phone" />
-    <input placeholder="Email" />
-    <select defaultValue="">
-      <option value="" disabled>Service Type</option>
-      <option>Frameless Shower Enclosures</option>
-      <option>Custom Mirrors</option>
-      <option>Window & Glass Solutions</option>
-      <option>Glass Tabletops</option>
-      <option>Specialty Glass Applications</option>
-    </select>
-    <textarea placeholder="Project Details" rows="5" />
-    <button type="button">Submit Request</button>
-  </form>
+    <a href="/contact" className="lux-btn lux-btn-primary">
+      Request an Estimate
+    </a>
+  </div>
 </section>
-      
-    </main>
-  );
-}
