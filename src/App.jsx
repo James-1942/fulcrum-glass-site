@@ -12,13 +12,18 @@ export default function App() {
       <ScrollToTop />
 
       <Routes>
-        <Route path="/" element={<HomePage />} />
+  <Route path="/" element={<HomePage />} />
 
-        <Route
-          path="/services/shower-glass"
-          element={<ShowerGlass />}
-        />
-      </Routes>
+  <Route
+    path="/services/shower-glass"
+    element={<ShowerGlass />}
+  />
+
+  <Route
+    path="/services/custom-mirrors"
+    element={<CustomMirrors />}
+  />
+   </Routes>
     </>
   );
 }
