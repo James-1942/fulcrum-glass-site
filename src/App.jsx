@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 import HomePage from "./pages/HomePage";
 import ShowerGlass from "./pages/ShowerGlass";
+import CustomMirrors from "./pages/CustomMirrors";
 import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
