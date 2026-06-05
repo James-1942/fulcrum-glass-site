@@ -193,6 +193,7 @@ background-image:
   min-width: 220px;
   border-bottom: none;
 }
+}
 
 .fg-section {
   background: #050b14;
@@ -507,35 +508,6 @@ background-image:
     background-size: cover;
     background-repeat: no-repeat;
   }
-}
-
-  .lux-hero-copy {
-    margin-left: 20px;
-    padding-right: 18px;
-  }
-
-  .lux-hero h1 {
-    font-size: 62px;
-  }
-
-  .lux-description {
-    font-size: 17px;
-  }
-
-  .lux-btn {
-    width: 100%;
-    min-height: 58px;
-  }
-
-.lux-proof-strip {
-  grid-template-columns: repeat(4, minmax(220px, 1fr));
-  overflow-x: auto;
-}
-
-.lux-proof-item {
-  justify-content: center;
-  padding-left: 0;
-  border-right: 1px solid rgba(255,255,255,0.18);
 }
 
 @media (max-width: 768px) {
