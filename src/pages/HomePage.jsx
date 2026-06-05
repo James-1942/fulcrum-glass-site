@@ -188,17 +188,20 @@ export default function App() {
 </section>
 
 <section className="fg-section fg-home-cta">
-  <div className="fg-section-heading">
+  <div className="fg-about-card">
     <span className="fg-eyebrow">ESTIMATE</span>
+
     <h2>Ready to Start Your Project?</h2>
+
     <p>
-      Tell us about your space and we’ll help bring the right glass solution
-      into focus.
+      Whether you're planning a frameless shower enclosure, custom mirrors,
+      window glass replacement, or a specialty glass installation, Fulcrum
+      Glass is ready to help bring your vision into focus.
     </p>
 
-   <Link to="/contact" className="lux-btn lux-btn-primary">
-  Request an Estimate
-</Link>
+    <Link to="/contact" className="lux-btn lux-btn-primary">
+      Request an Estimate
+    </Link>
   </div>
 </section>
       </main>
