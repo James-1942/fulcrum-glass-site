@@ -73,18 +73,47 @@ export default function App() {
   </div>
 </section>
 
-<section className="fg-section fg-home-preview">
+<section className="fg-section">
   <div className="fg-section-heading">
     <span className="fg-eyebrow">SERVICES</span>
-    <h2>Architectural Glass Services</h2>
+    <h2>Featured Services</h2>
     <p>
-      Explore premium residential glass solutions including shower enclosures,
-      mirrors, windows, tabletops, and specialty glass applications.
+      Precision-crafted residential glass solutions designed for modern
+      homes, luxury bathrooms, and architectural interiors.
     </p>
+  </div>
 
-    <a href="/services" className="lux-btn lux-btn-primary">
-      View Services
-    </a>
+  <div className="fg-service-grid">
+    {[
+      [
+        "Frameless Shower Glass",
+        "Custom frameless shower enclosures built for clean lines and timeless design.",
+        "/services/shower-glass",
+      ],
+      [
+        "Custom Mirrors",
+        "Tailored mirror installations for bathrooms, entryways, gyms, and feature walls.",
+        "/services/custom-mirrors",
+      ],
+      [
+        "Window Glass Solutions",
+        "Glass replacement and residential window solutions installed with precision.",
+        "/services/window-glass-solutions",
+      ],
+    ].map(([title, text, path]) => (
+      <article className="fg-service-card" key={title}>
+        <Link to={path} className="fg-service-link">
+          <span>{title}</span>
+          <p>{text}</p>
+        </Link>
+      </article>
+    ))}
+  </div>
+
+  <div style={{ marginTop: "40px" }}>
+    <Link to="/services" className="lux-btn lux-btn-secondary">
+      View All Services
+    </Link>
   </div>
 </section>
 
@@ -97,9 +126,9 @@ export default function App() {
       around precision, clean lines, and refined craftsmanship.
     </p>
 
-    <a href="/showcase" className="lux-btn lux-btn-secondary">
-      View Showcase
-    </a>
+    <Link to="/showcase" className="lux-btn lux-btn-secondary">
+  View Showcase
+</Link>
   </div>
 </section>
 
@@ -112,9 +141,9 @@ export default function App() {
       every residential glass installation.
     </p>
 
-    <a href="/about" className="lux-btn lux-btn-secondary">
-      About Fulcrum Glass
-    </a>
+   <Link to="/about" className="lux-btn lux-btn-secondary">
+  About Fulcrum Glass
+</Link>
   </div>
 </section>
 
@@ -127,9 +156,9 @@ export default function App() {
       into focus.
     </p>
 
-    <a href="/contact" className="lux-btn lux-btn-primary">
-      Request an Estimate
-    </a>
+   <Link to="/contact" className="lux-btn lux-btn-primary">
+  Request an Estimate
+</Link>
   </div>
 </section>
       </main>
