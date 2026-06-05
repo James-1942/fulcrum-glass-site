@@ -184,14 +184,14 @@ background-image:
     align-items: flex-start;
   }
 
-  .lux-proof-strip {
-    grid-template-columns: 1fr 1fr;
-    gap: 0;
-  }
+.lux-proof-strip {
+  grid-template-columns: repeat(4, 1fr);
+  overflow-x: auto;
+}
 
-  .lux-proof-item {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-  }
+.lux-proof-item {
+  min-width: 220px;
+  border-bottom: none;
 }
 
 .fg-section {
@@ -527,15 +527,16 @@ background-image:
     min-height: 58px;
   }
 
-  .lux-proof-strip {
-    grid-template-columns: 1fr;
-  }
+.lux-proof-strip {
+  grid-template-columns: repeat(4, minmax(220px, 1fr));
+  overflow-x: auto;
+}
 
-  .lux-proof-item {
-    justify-content: flex-start;
-    padding-left: 16px;
-    border-right: none;
-  }
+.lux-proof-item {
+  justify-content: center;
+  padding-left: 0;
+  border-right: 1px solid rgba(255,255,255,0.18);
+}
 
 @media (max-width: 768px) {
   .lux-hero {
