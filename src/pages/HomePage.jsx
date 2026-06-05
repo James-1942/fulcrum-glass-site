@@ -95,26 +95,35 @@ export default function App() {
 </div>
 </section>
 
-<section id="Showcase" className="fg-section fg-work">
+<section id="Showcase" className="fg-section fg-showcase">
   <div className="fg-section-heading">
-    <span className="fg-eyebrow">PORTFOLIO</span>
+    <span className="fg-eyebrow">SHOWCASE</span>
     <h2>Selected Installations</h2>
     <p>
-      A curated collection of residential glass installations showcasing
-      precision craftsmanship and understated luxury.
+      A curated look at residential glass installations designed around
+      precision, clean lines, and refined craftsmanship.
     </p>
   </div>
 
-  <div className="fg-gallery">
-    <div className="fg-gallery-feature">
-      <span>Featured Installation</span>
-      <h3>Frameless Shower Glass</h3>
-    </div>
+  <div className="fg-showcase-grid">
+    {[
+      ["Frameless Shower Enclosure", "Shower Glass", "Clean frameless lines with a refined architectural finish."],
+      ["Custom Vanity Mirror", "Custom Mirrors", "Tailored mirror work designed to complement finished interiors."],
+      ["Window Glass Replacement", "Window Solutions", "Residential glass replacement completed with precision and care."],
+      ["Glass Tabletop", "Tabletops", "Custom-cut protective glass with polished presentation."],
+      ["Mirror Wall Installation", "Custom Mirrors", "Large-format mirror installation for a clean expanded feel."],
+      ["Specialty Glass Detail", "Specialty Glass", "Custom glass applications built around unique residential spaces."]
+    ].map(([title, category, text]) => (
+      <article className="fg-showcase-card" key={title}>
+        <div className="fg-showcase-image" />
 
-    <div className="fg-gallery-tile">Custom Mirrors</div>
-    <div className="fg-gallery-tile">Window Systems</div>
-    <div className="fg-gallery-tile">Glass Tabletops</div>
-    <div className="fg-gallery-tile">Specialty Glass</div>
+        <div className="fg-showcase-info">
+          <span>{category}</span>
+          <h3>{title}</h3>
+          <p>{text}</p>
+        </div>
+      </article>
+    ))}
   </div>
 </section>
 
