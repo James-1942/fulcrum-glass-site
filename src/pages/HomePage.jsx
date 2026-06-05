@@ -117,18 +117,47 @@ export default function App() {
   </div>
 </section>
 
-<section className="fg-section fg-home-preview">
+<section className="fg-section">
   <div className="fg-section-heading">
     <span className="fg-eyebrow">SHOWCASE</span>
     <h2>Selected Installations</h2>
     <p>
-      View a curated collection of residential glass installations designed
+      A curated collection of residential glass installations designed
       around precision, clean lines, and refined craftsmanship.
     </p>
+  </div>
 
+  <div className="fg-showcase-grid">
+    {[
+      {
+        image: showerImage,
+        title: "Frameless Shower Glass"
+      },
+      {
+        image: mirrorImage,
+        title: "Custom Mirrors"
+      },
+      {
+        image: windowImage,
+        title: "Window Glass Solutions"
+      }
+    ].map((item) => (
+      <div className="fg-showcase-card" key={item.title}>
+        <div
+          className="fg-showcase-image"
+          style={{ backgroundImage: `url(${item.image})` }}
+        />
+        <div className="fg-showcase-info">
+          <h3>{item.title}</h3>
+        </div>
+      </div>
+    ))}
+  </div>
+
+  <div style={{ marginTop: "40px" }}>
     <Link to="/showcase" className="lux-btn lux-btn-secondary">
-  View Showcase
-</Link>
+      View Full Showcase
+    </Link>
   </div>
 </section>
 
