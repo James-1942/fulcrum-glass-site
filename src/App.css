@@ -380,6 +380,94 @@ background-image:
   cursor: pointer;
 }
 
+/* ===== SHOWCASE ===== */
+
+.fg-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  margin-top: 56px;
+}
+
+.fg-showcase-card {
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.12);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.04),
+      rgba(255,255,255,0.015)
+    );
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.fg-showcase-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(185,151,98,0.5);
+}
+
+.fg-showcase-image {
+  height: 280px;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(4,10,22,0.08),
+      rgba(4,10,22,0.5)
+    ),
+    url("./assets/hero-bathroom.png");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.fg-showcase-info {
+  padding: 26px;
+}
+
+.fg-showcase-info span {
+  display: block;
+  margin-bottom: 12px;
+
+  color: rgba(185,151,98,0.9);
+
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.fg-showcase-info h3 {
+  margin: 0 0 14px;
+
+  color: #fff8eb;
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.fg-showcase-info p {
+  margin: 0;
+
+  color: rgba(255,248,235,0.72);
+  line-height: 1.7;
+}
+
+@media (max-width: 1100px) {
+  .fg-showcase-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .fg-showcase-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fg-showcase-image {
+    height: 220px;
+  }
+}
+
 @media (max-width: 900px) {
   .fg-service-grid {
     grid-template-columns: 1fr;
