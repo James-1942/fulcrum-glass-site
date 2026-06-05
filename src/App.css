@@ -637,3 +637,78 @@ background-image:
     flex: 0 0 44px;
   }
 }
+
+.fg-approach-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+  margin: 42px 0;
+}
+
+.fg-approach-card {
+  min-height: 260px;
+  padding: 32px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.055),
+      rgba(255, 255, 255, 0.018)
+    ),
+    #07111f;
+}
+
+.fg-approach-icon {
+  width: 54px;
+  height: 54px;
+  margin-bottom: 34px;
+  color: #b99762;
+}
+
+.fg-approach-icon svg {
+  width: 54px;
+  height: 54px;
+  stroke-width: 1.4;
+}
+
+.fg-approach-card h3 {
+  margin: 0 0 14px;
+  color: #fff8eb;
+  font-size: 22px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.fg-approach-card p {
+  margin: 0;
+  color: rgba(244, 239, 230, 0.72);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.fg-about-cta {
+  margin-top: 42px;
+}
+
+@media (max-width: 1000px) {
+  .fg-approach-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .fg-approach-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fg-approach-card {
+    min-height: auto;
+    display: flex;
+    gap: 24px;
+    align-items: center;
+  }
+
+  .fg-approach-icon {
+    flex: 0 0 54px;
+    margin-bottom: 0;
+  }
+}
