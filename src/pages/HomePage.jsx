@@ -112,8 +112,7 @@ export default function App() {
   </div>
 
   <div className="fg-showcase-grid">
-    {[
-   [
+{[
   [
     "Frameless Shower Enclosure",
     "Shower Glass",
@@ -151,19 +150,19 @@ export default function App() {
     specialtyImage
   ]
 ].map(([title, category, text, image]) => (
-      <article className="fg-showcase-card" key={title}>
-       <div
-  className="fg-showcase-image"
-  style={{ backgroundImage: `url(${image})` }}
-/>
+  <article className="fg-showcase-card" key={title}>
+    <div
+      className="fg-showcase-image"
+      style={{ backgroundImage: `url(${image})` }}
+    />
 
-        <div className="fg-showcase-info">
-          <span>{category}</span>
-          <h3>{title}</h3>
-          <p>{text}</p>
-        </div>
-      </article>
-    ))}
+    <div className="fg-showcase-info">
+      <span>{category}</span>
+      <h3>{title}</h3>
+      <p>{text}</p>
+    </div>
+  </article>
+))}
   </div>
 </section>
 
