@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import ShowerGlass from "./pages/ShowerGlass";
 import CustomMirrors from "./pages/CustomMirrors";
+import WindowGlass from "./pages/WindowGlass";
 import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
@@ -23,6 +24,9 @@ export default function App() {
     path="/services/custom-mirrors"
     element={<CustomMirrors />}
   />
+  <Route 
+    path="/services/window-glass-solutions" 
+    element={<WindowGlass />} />
    </Routes>
     </>
   );
