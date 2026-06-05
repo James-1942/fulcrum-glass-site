@@ -7,6 +7,7 @@ import CustomMirrors from "./pages/CustomMirrors";
 import WindowGlass from "./pages/WindowGlass";
 import GlassTabletops from "./pages/GlassTabletops";
 import SpecialtyGlass from "./pages/SpecialtyGlass";
+import Services from "./pages/Services";
 import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/services/window-glass-solutions" element={<WindowGlass />} />
         <Route path="/services/glass-tabletops" element={<GlassTabletops />} />
         <Route path="/services/specialty-glass" element={<SpecialtyGlass />} />
+        <Route path="/services" element={<Services />} />
       </Routes>
     </>
   );
