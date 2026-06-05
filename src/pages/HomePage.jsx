@@ -73,34 +73,6 @@ export default function App() {
   </div>
 </section>
 
-      <section id="services" className="fg-section fg-services">
-  <div className="fg-section-heading">
-    <span className="fg-eyebrow">SERVICES</span>
-    <h2>Architectural Glass Services</h2>
-    <p>
-      Precision-crafted residential glass solutions designed to elevate modern
-      spaces through clarity, balance, and detail.
-    </p>
-  </div>
-
-  <div className="fg-service-grid">
-  {[
-    ["Frameless Shower Enclosures", "Custom frameless shower systems built for clean lines, durability, and modern residential design.", "/services/shower-glass"],
-    ["Custom Mirrors", "Tailored mirror installations designed to complement bathrooms, gyms, entryways, and feature spaces.", "/services/custom-mirrors"],
-    ["Window & Glass Solutions", "Glass replacement, new construction windows, and residential window solutions installed with precision and care.", "/services/window-glass-solutions"],
-    ["Glass Tabletops", "Custom-cut glass tabletops and protective surfaces crafted for both function and presentation.", "/services/glass-tabletops"],
-    ["Specialty Glass Applications", "Architectural and custom glass solutions for shelving, partitions, cabinet glass, and unique residential projects.", "/services/specialty-glass"]
-  ].map(([title, text, path]) => (
-    <article className="fg-service-card" key={title}>
-      <Link to={path} className="fg-service-link">
-        <span>{title}</span>
-        <p>{text}</p>
-      </Link>
-    </article>
-  ))}
-</div>
-</section>
-
 <section className="fg-section fg-home-preview">
   <div className="fg-section-heading">
     <span className="fg-eyebrow">SERVICES</span>
