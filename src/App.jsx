@@ -9,6 +9,7 @@ import GlassTabletops from "./pages/GlassTabletops";
 import SpecialtyGlass from "./pages/SpecialtyGlass";
 import Services from "./pages/Services";
 import Showcase from "./pages/Showcase";
+import About from "./pages/About";
 import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
@@ -25,6 +26,7 @@ export default function App() {
         <Route path="/services/specialty-glass" element={<SpecialtyGlass />} />
         <Route path="/services" element={<Services />} />
         <Route path="/showcase" element={<Showcase />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </>
   );
