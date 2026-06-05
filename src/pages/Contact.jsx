@@ -54,25 +54,29 @@ export default function Contact() {
             </div>
           </div>
 
-          <form className="fg-contact-form">
-            <input placeholder="Name" />
-            <input placeholder="Phone" />
-            <input placeholder="Email" />
+          <form
+            className="fg-contact-form"
+            action="https://formspree.io/f/YOUR_FORM_ID"
+            method="POST"
+            >
+<input name="name" placeholder="Name" />
+<input name="phone" placeholder="Phone" />
+<input name="email" type="email" placeholder="Email" />
 
-            <select defaultValue="">
-              <option value="" disabled>
-                Service Type
-              </option>
-              <option>Frameless Shower Enclosures</option>
-              <option>Custom Mirrors</option>
-              <option>Window & Glass Solutions</option>
-              <option>Glass Tabletops</option>
-              <option>Specialty Glass Applications</option>
-            </select>
+<select name="service" defaultValue="">
+  <option value="" disabled>
+    Service Type
+  </option>
+  <option>Frameless Shower Enclosures</option>
+  <option>Custom Mirrors</option>
+  <option>Window & Glass Solutions</option>
+  <option>Glass Tabletops</option>
+  <option>Specialty Glass Applications</option>
+</select>
 
-            <textarea placeholder="Project Details" rows="6" />
+<textarea name="message" placeholder="Project Details" rows="6" />
 
-            <button type="button">Submit Request</button>
+<button type="submit">Submit Request</button>
           </form>
         </div>
       </section>
