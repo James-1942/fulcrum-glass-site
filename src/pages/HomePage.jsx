@@ -3,6 +3,12 @@ import { ArrowRight } from "lucide-react";
 import "../App.css";
 import FulcrumHeader from "../FulcrumHeader";
 import { Link } from "react-router-dom";
+import showerImage from "../assets/showcase-shower-glass.png";
+import mirrorImage from "../assets/showcase-custom-mirror.png";
+import windowImage from "../assets/showcase-window-solutions.png";
+import tabletopImage from "../assets/showcase-glass-tabletop.png";
+import mirrorWallImage from "../assets/showcase-mirror-wall.png";
+import specialtyImage from "../assets/showcase-specialty-glass.png";
 
 export default function App() {
   return (
@@ -107,15 +113,49 @@ export default function App() {
 
   <div className="fg-showcase-grid">
     {[
-      ["Frameless Shower Enclosure", "Shower Glass", "Clean frameless lines with a refined architectural finish."],
-      ["Custom Vanity Mirror", "Custom Mirrors", "Tailored mirror work designed to complement finished interiors."],
-      ["Window Glass Replacement", "Window Solutions", "Residential glass replacement completed with precision and care."],
-      ["Glass Tabletop", "Tabletops", "Custom-cut protective glass with polished presentation."],
-      ["Mirror Wall Installation", "Custom Mirrors", "Large-format mirror installation for a clean expanded feel."],
-      ["Specialty Glass Detail", "Specialty Glass", "Custom glass applications built around unique residential spaces."]
-    ].map(([title, category, text]) => (
+   [
+  [
+    "Frameless Shower Enclosure",
+    "Shower Glass",
+    "Clean frameless lines with a refined architectural finish.",
+    showerImage
+  ],
+  [
+    "Custom Vanity Mirror",
+    "Custom Mirrors",
+    "Tailored mirror work designed to complement finished interiors.",
+    mirrorImage
+  ],
+  [
+    "Window Glass Replacement",
+    "Window Solutions",
+    "Residential glass replacement completed with precision and care.",
+    windowImage
+  ],
+  [
+    "Glass Tabletop",
+    "Tabletops",
+    "Custom-cut protective glass with polished presentation.",
+    tabletopImage
+  ],
+  [
+    "Mirror Wall Installation",
+    "Custom Mirrors",
+    "Large-format mirror installation for a clean expanded feel.",
+    mirrorWallImage
+  ],
+  [
+    "Specialty Glass Detail",
+    "Specialty Glass",
+    "Custom glass applications built around unique residential spaces.",
+    specialtyImage
+  ]
+].map(([title, category, text, image]) => (
       <article className="fg-showcase-card" key={title}>
-        <div className="fg-showcase-image" />
+       <div
+  className="fg-showcase-image"
+  style={{ backgroundImage: `url(${image})` }}
+/>
 
         <div className="fg-showcase-info">
           <span>{category}</span>
